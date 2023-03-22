@@ -1,6 +1,5 @@
 import { readFileSync } from 'fs';
 import path from 'path';
-import process from 'process';
 import _ from 'lodash';
 
 export const genDiff = (filepath1, filepath2) => {
@@ -23,7 +22,7 @@ export const genDiff = (filepath1, filepath2) => {
         } else {
             result.push(`  + ${key}: ${data2[key]}`);
         }
-    };
+    }
 
     result.unshift('{');
     result.push('}');
