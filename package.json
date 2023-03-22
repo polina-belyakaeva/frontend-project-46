@@ -1,0 +1,28 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/polina-belyakaeva/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/polina-belyakaeva/frontend-project-46/actions)",
+  "main": "gendiff.js",
+  "bin": {
+    "gendiff": "./src/bin/gendiff.js"
+  },
+  "scripts": {
+    "test": "npx jest",
+    "lint": "eslint .  --ext .js",
+    "lint-fix": "eslint --fix .  --ext .js"
+  },
+  "type": "module",
+  "author": "Polina Belyakaeva",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^10.0.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "jest": "^29.5.0"
+  }
+}
