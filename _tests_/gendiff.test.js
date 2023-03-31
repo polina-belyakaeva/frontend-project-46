@@ -1,5 +1,5 @@
 import { test, expect } from '@jest/globals';
-import { genDiff } from '../src/genDiff';
+import { genDiff } from '../src/genDiff.js';
 
 const path1 = '/Users/polinabelakaeva/Desktop/proj/frontend-project-46/_fixtures_/file1.json';
 const path2 = '/Users/polinabelakaeva/Desktop/proj/frontend-project-46/_fixtures_/file2.json';
