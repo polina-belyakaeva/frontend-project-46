@@ -1,11 +1,18 @@
-install: install-deps
-	npx simple-git-hooks
+install: 
+	npm ci
+
+link:
+	npm link
+
 run:
 	bin/nodejs-package.js 10
+
 gendiff:
 	node bin/gendiff.js
-install-deps:
-	npm ci
+
+publish: 
+	npm publish --dry-run
+
 test:
 	NODE_OPTIONS=--experimental-vm-modules npx jest
 
@@ -14,6 +21,3 @@ test-coverage:
 
 lint:
 	npx eslint .
-
-publish:
-	npm publish

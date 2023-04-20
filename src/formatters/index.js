@@ -1,5 +1,6 @@
 import formatStylish from "./stylish.js";
 import formatPlain from "./plain.js";
+import formatJSON from "./json.js";
 
 const chooseFormat = (diffTree, formatName) => {
   switch (formatName) {
@@ -7,6 +8,8 @@ const chooseFormat = (diffTree, formatName) => {
       return formatStylish(diffTree);
     case "plain":
       return formatPlain(diffTree);
+    case "json":
+      return formatJSON(diffTree);
     default:
       throw new Error(`Unknown formatter name: ${formatName}`);
   }
