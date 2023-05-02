@@ -35,4 +35,4 @@ Node.js **`v13.0.0`** or higher must be installed to use the program.
 
 ---
 
-[![asciicast](https://asciinema.org/a/eKsDA8anPe9YgcZLcBOiO5cd9)
+[![asciicast](https://asciinema.org/a/Z0DecVWQDFHUZuCKBs0Bc2SiO.svg)](https://asciinema.org/a/Z0DecVWQDFHUZuCKBs0Bc2SiO)

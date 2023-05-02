@@ -2,9 +2,9 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/polina-belyakaeva/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/polina-belyakaeva/frontend-project-46/actions)",
-  "main": "genDiff.js",
+  "main": "src/genDiff.js",
   "bin": {
-    "gendiff": "./src/bin/gendiff.js"
+    "gendiff": "bin/gendiff.js"
   },
   "scripts": {
     "test": "npx jest",
