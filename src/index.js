@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 
 export const genDiff = (pathFile1, pathFile2, formatName = "stylish") => {
   const getDir = (filepath) => path.dirname(filepath);
-  const getExtension = (filePath) => path.extname(filePath);
+  const getExtension = (filePath) => path.extname(filePath).slice(1);
   const buildFullPath = (filePath) => path.resolve(getDir(fileURLToPath(import.meta.url)), "../__fixtures__", filePath);
   const getData = (filePath) => parseFile(readFileSync(filePath, "utf-8"), getExtension(filePath));
 
