@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-const checkValueForCompexity = (value) => {
+const checkValueForComplexity = (value) => {
   if (_.isObject(value)) {
     return "[complex value]";
   }
@@ -22,11 +22,11 @@ const plainDiffTree = (diffTree) => {
         case "nested":
           return iter(node.children, complexPath);
         case "added":
-          return `Property '${complexPath}' was added with value: ${checkValueForCompexity(node.value)}`;
+          return `Property '${complexPath}' was added with value: ${checkValueForComplexity(node.value)}`;
         case "deleted":
           return `Property '${complexPath}' was removed`;
         case "changed":
-          return `Property '${complexPath}' was updated. From ${checkValueForCompexity(node.value1)} to ${checkValueForCompexity(node.value2)}`;
+          return `Property '${complexPath}' was updated. From ${checkValueForComplexity(node.value1)} to ${checkValueForComplexity(node.value2)}`;
         case "unchanged":
           return [];
         default:
