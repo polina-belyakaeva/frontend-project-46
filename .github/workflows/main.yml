@@ -9,16 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+        uses: actions/setup-node@v1
         with:
           node-version: 18.14.0
-      - run: npm install
-      - run: make lint
-      - name: run tests
+
+      - name: Install
+        run: npm install
+
+      - name: Run lint
+        run: make lint
+
+      - name: Run tests
         run: npm test
+
       - name: Test & publish code coverage
-      - uses: paambaati/codeclimate-action@v3.0.0
+        uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
