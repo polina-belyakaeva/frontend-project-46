@@ -25,10 +25,7 @@ const stylishDiffTree = (diffTree) => {
         case 'deleted':
           return `${getIndent(depth)}- ${key}: ${stringify(node.value, depth + 1)}`;
         case 'changed':
-          return `${getIndent(depth)}- ${key}: ${stringify(node.value1, depth + 1)}\n${getIndent(depth)}+ ${key}: ${stringify(
-            node.value2,
-            depth + 1
-          )}`;
+          return `${getIndent(depth)}- ${key}: ${stringify(node.value1, depth + 1)}\n${getIndent(depth)}+ ${key}: ${stringify(node.value2, depth + 1)}`;
         case 'unchanged':
           return `${getIndent(depth)}  ${key}: ${stringify(node.value, depth + 1)}`;
         default:

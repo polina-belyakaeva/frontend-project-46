@@ -8,20 +8,11 @@ const getDir = (filepath) => path.dirname(filepath);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = getDir(__filename);
 
-const stylishExpected = readFileSync(
-  path.resolve(__dirname, '../__fixtures__', 'stylish_expected.txt'),
-  'utf-8'
-);
+const stylishExpected = readFileSync(path.resolve(__dirname, '../__fixtures__', 'stylish_expected.txt'), 'utf-8');
 
-const plainExpected = readFileSync(
-  path.resolve(__dirname, '../__fixtures__', 'plain_expected.txt'),
-  'utf-8'
-);
+const plainExpected = readFileSync(path.resolve(__dirname, '../__fixtures__', 'plain_expected.txt'), 'utf-8');
 
-const jsonExpected = readFileSync(
-  path.resolve(__dirname, '../__fixtures__', 'json_expected.txt'),
-  'utf-8'
-);
+const jsonExpected = readFileSync(path.resolve(__dirname, '../__fixtures__', 'json_expected.txt'), 'utf-8');
 
 test('JSON test', () => {
   const path1 = path.resolve(__dirname, '../__fixtures__', 'file1.json');
