@@ -1,14 +1,14 @@
-import formatStylish from "./stylish.js";
-import formatPlain from "./plain.js";
-import formatJSON from "./json.js";
+import formatStylish from './stylish.js';
+import formatPlain from './plain.js';
+import formatJSON from './json.js';
 
 const chooseFormat = (diffTree, formatName) => {
   switch (formatName) {
-    case "stylish":
+    case 'stylish':
       return formatStylish(diffTree);
-    case "plain":
+    case 'plain':
       return formatPlain(diffTree);
-    case "json":
+    case 'json':
       return formatJSON(diffTree);
     default:
       throw new Error(`Unknown formatter name: ${formatName}`);
